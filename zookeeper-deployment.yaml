@@ -22,3 +22,5 @@ spec:
         env:
         - name: ALLOW_ANONYMOUS_LOGIN
           value: "yes"
+        - name: ZOOKEEPER_CLIENT_PORT
+          value: "2181"

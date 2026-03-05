@@ -28,3 +28,5 @@ spec:
           value: PLAINTEXT://:9092
         - name: KAFKA_CFG_ADVERTISED_LISTENERS
           value: PLAINTEXT://kafka:9092
+        - name: KAFKA_BROKER_ID
+          value: "1"
