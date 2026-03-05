@@ -34,4 +34,5 @@ spec:
           value: PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT
         - name: ALLOW_PLAINTEXT_LISTENER
           value: "yes"
-
+        - name: KAFKA_PORT
+          value: ""
