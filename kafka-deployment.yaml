@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: kafka
-        image: dhi.io/kafka:4-debian13-native
+        image: confluentinc/cp-kafka:latest
         ports:
         - containerPort: 9092
         env:
