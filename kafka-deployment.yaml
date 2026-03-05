@@ -17,8 +17,6 @@ spec:
       containers:
       - name: kafka
         image: confluentinc/cp-kafka:latest
-        ports:
-        - containerPort: 9092
         env:
         - name: KAFKA_PROCESS_ROLES
           value: "broker,controller"
