@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: kafka
-        image: bitnami/kafka:latest
+        image: dhi.io/kafka:4-debian13-native
         ports:
         - containerPort: 9092
         env:
