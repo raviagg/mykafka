@@ -7,9 +7,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/YOUR_REPO/fraud-detection-lab
-    targetRevision: HEAD
-    path: kafka
+    repoURL: https://github.com/raviagg/kafka.git
+    targetRevision: main
+    path: .
   destination:
     server: https://kubernetes.default.svc
     namespace: kafka
