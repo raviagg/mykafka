@@ -5,8 +5,13 @@ metadata:
   name: mykafka
   namespace: mykafka
 spec:
+  clusterIP: None       # headless service for StatefulSet
   selector:
-    app: kafka
+    app: mykafka
   ports:
-    - port: 9092
+    - name: broker
+      port: 9092
       targetPort: 9092
+    - name: controller
+      port: 9093
+      targetPort: 9093
