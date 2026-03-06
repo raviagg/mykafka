@@ -18,6 +18,13 @@ spec:
       containers:
       - name: mykafka
         image: confluentinc/cp-kafka:latest
+        command:
+        - sh
+        - -c
+        - |
+          export KAFKA_NODE_ID=${POD_NAME##*-}
+          echo "Kafka node id: $KAFKA_NODE_ID"
+          /etc/confluent/docker/run
         ports:
           - containerPort: 9092
             name: broker
@@ -26,7 +33,7 @@ spec:
         env:
         - name: KAFKA_PROCESS_ROLES
           value: "broker,controller"
-        - name: KAFKA_NODE_ID
+        - name: POD_NAME
           valueFrom:
             fieldRef:
               fieldPath: metadata.name   # StatefulSet pod name: mykafka-0, mykafka-1, mykafka-2
