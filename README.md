@@ -22,6 +22,9 @@ Kafka
 ## List topics
 ```kafka-topics --bootstrap-server mykafka:9092 --list```
 
+## Delete topic
+```kafka-topics --bootstrap-server mykafka:9092 --delete --topic transactions```
+
 ## Consume from topic
 ```kafka-console-consumer --bootstrap-server mykafka:9092 --topic transactions --from-beginning```
 
